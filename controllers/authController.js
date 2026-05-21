@@ -4,7 +4,7 @@ const path = require('path');
 const util = require('util');
 const User = require('../models/User');
 const { signToken } = require('../utils/jwt');
-
+//added in auth
 const registerValidators = [
   body('name').notEmpty().withMessage('Name is required'),
   body('email').isEmail().withMessage('Valid email is required'),
