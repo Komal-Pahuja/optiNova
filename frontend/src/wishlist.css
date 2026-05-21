@@ -26,8 +26,8 @@ body:has(.wishlist-page),
   max-width: 1100px;
   margin: 0 auto;
   background: rgba(248, 250, 252, 0.96);
-  border-radius: 28px;
-  padding: 32px;
+  border-radius: 27px;
+  padding: 31px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
