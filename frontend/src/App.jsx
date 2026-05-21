@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useNavigate, useParams, NavLink } from 'react-
 import { AuthProvider, useAuth } from './AuthContext';
 import Header from './Header';
 import { apiDelete, apiGet, apiPatch, apiPost, apiPut } from './api';
-
+//imports 
 const ProtectedRoute = ({ children, role }) => {
   const { user, loading } = useAuth();
   if (loading) return <div className="container main">Loading...</div>;
