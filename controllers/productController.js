@@ -60,6 +60,19 @@ const apiGetProducts = async (req, res) => {
   return res.json(products);
 };
 
+const apiGetProductFilters = async (req, res) => {
+  const [categories, brands] = await Promise.all([
+    Category.find().sort({ name: 1 }),
+    Product.distinct('brand'),
+  ]);
+  return res.json({ categories, brands, frameTypes, lensTypes, genderTypes });
+};
+
+const apiGetCategories = async (req, res) => {
+  const categories = await Category.find().sort({ name: 1 });
+  return res.json(categories);
+};
+
 const apiGetProduct = async (req, res) => {
   const product = await Product.findById(req.params.id).populate('category');
   if (!product) {
@@ -73,4 +86,6 @@ module.exports = {
   productDetails,
   apiGetProducts,
   apiGetProduct,
+  apiGetProductFilters,
+  apiGetCategories,
 };
